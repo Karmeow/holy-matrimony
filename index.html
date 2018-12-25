@@ -1,0 +1,192 @@
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand|Charm" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+      <div class="main">
+        <div class="picture">
+          <div class="countdown-container">
+            <p>October 5th, 2019</p>
+            <div id="countdown">
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+
+    <style>
+
+      body {
+        margin:0;
+      }
+
+      .main h1 {
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 0;
+      }
+
+      .main {
+        font-family: 'Charm', sans-serif;
+        font-style: normal;
+        text-align: center;
+        color: black;
+      }
+
+      .picture {
+        background-image: url(img/woods.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+      }
+
+      .countdown-container {
+        font-size: 25px;
+        color: white;
+        float: right;
+        vertical-align: middle;
+        width: 15%;
+        height: 100%;
+        background-color: rgba(70, 70, 70, 0.51);
+      }
+
+      .countdown-container p {
+        margin-top: 75px;
+        margin-bottom: 30px;
+      }
+
+      #countdown {
+        color: rgb(181, 181, 181);
+        font-size: 54px;
+      }
+
+      #countdown h2 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .countdown-element {
+        margin-bottom: 1px;
+        font-weight:bold;
+        display: block;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .countdown-container p {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          font-size: 16px;
+        }
+
+        .countdown-container {
+          position: fixed;
+          bottom: 0%;
+          float:none;
+          width: 100%;
+          height: 15%;
+        }
+
+        #countdown h2 {
+          font-size: 10px;
+          margin: 0;
+        }
+
+        .countdown-element {
+          font-size: 20px;
+          font-family: 'Charm', sans-serif;
+          font-weight:bold;
+          display: inline-block;
+          width: 20%;
+        }
+      }
+    </style>
+
+    <script>
+      countdownFormat = (key, value) => {
+        return '<span class="countdown-element">' + numberStringFormat(value) + '</br>' + timeStringFormat(key) + '</span>'
+      }
+
+      numberStringFormat = (number) => {
+        if (number < 10) {
+          return "0" + number
+        }
+        return number
+      }
+
+      timeStringFormat = (word) => {
+        return "<h2>" + word + " </h2>"
+      }
+
+      countdown = () => {
+        var countDownDate = new Date("Oct 5, 2019 15:00:00").getTime();
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+
+        if (distance < 0) {
+          document.getElementById("countdown").innerHTML = "NOW";
+        } else {
+          document.getElementById("countdown").innerHTML =
+                  countdownFormat("Days", days) +
+                  countdownFormat("Hours" , hours) +
+                  countdownFormat("Minutes", minutes) +
+                  countdownFormat("Seconds", seconds);
+        }
+      }
+
+      countdown()
+
+        var intervalFunction = setInterval(() => {
+          countdown()
+        }, 1000);
+    </script>
+
+    <style>
+        body {
+          -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+             -moz-animation: fadein 2s; /* Firefox < 16 */
+              -ms-animation: fadein 2s; /* Internet Explorer */
+               -o-animation: fadein 2s; /* Opera < 12.1 */
+                  animation: fadein 2s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Firefox < 16 */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Opera < 12.1 */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+</html>
