@@ -1,0 +1,116 @@
+body {
+  margin:0;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+.main {
+  font-family: 'Charm', sans-serif;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+
+.picture {
+  background-image: url(../img/woods_50.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.countdown-container {
+  font-size: 25px;
+  color: white;
+  float: right;
+  vertical-align: middle;
+  width: 15%;
+  height: 100%;
+  background-color: rgba(70, 70, 70, 0.51);
+}
+
+.countdown-container p {
+  margin-top: 75px;
+  margin-bottom: 30px;
+}
+
+#countdown {
+  color: rgb(181, 181, 181);
+  font-size: 54px;
+}
+
+#countdown h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.countdown-element {
+  margin-bottom: 1px;
+  font-weight:bold;
+  display: block;
+}
+
+@media only screen and (max-width: 800px) {
+  .countdown-container p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .countdown-container {
+    position: fixed;
+    bottom: 0%;
+    float:none;
+    width: 100%;
+    height: 15%;
+  }
+
+  #countdown h2 {
+    margin: 0;
+  }
+
+  .countdown-element {
+    font-family: 'Charm', sans-serif;
+    font-weight:bold;
+    display: inline-block;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .countdown-container {
+    font-size: 32px;
+  }
+
+  #countdown h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .countdown-element {
+    font-size: 30px;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .countdown-container p {
+    font-size: 16px;
+  }
+
+  #countdown h2 {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .countdown-element {
+    font-size: 20px;
+    font-family: 'Charm', sans-serif;
+    font-weight:bold;
+    display: inline-block;
+    width: 20%;
+  }
+}
