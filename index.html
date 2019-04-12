@@ -1,29 +1,60 @@
 <html>
-    <head>
-      <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand|Charm" rel="stylesheet">
-      <link href="styles/app.css" rel="stylesheet">
-      <link href="styles/fade-in.css" rel="stylesheet">
-      <!-- <link href="styles/map.css" rel="stylesheet"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="scripts/countdown.js"></script>
-    </head>
 
-    <body>
-      <div class="main">
-        <div class="picture">
-          <div class="countdown-container">
-            <p>October 5th, 2019</p>
-            <div id="countdown">
-            </div>
-          </div>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand|Charm" rel="stylesheet">
+  <link href="styles/app.css" rel="stylesheet">
+  <link href="styles/fade-in.css" rel="stylesheet">
+  <link href="styles/map.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/countdown.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="picture">
+      <div class="countdown-container">
+        <p>October 5th, 2019</p>
+        <div id="countdown">
         </div>
-        <!-- <div class="body">
-          <div id='map'></div>
-        </body> -->
       </div>
-    </body>
+    </div>
+    <div class="content" id="venue">
+      <div class="header">
+        <h1>Venue</h1>
+      </div>
+      <div class="venue-info">
+        <div id="info">
+          <p>Caberfae Peaks Ski & Golf</p>
+          <p>1 Caberfae Lane</p>
+          <p>Cadillac, Michigan 49601</p>
+          <br>
+          <a href="https://caberfaepeaks.com/" target="_blank">https://caberfaepeaks.com/</a>
+        </div>
+        <div id='map'></div>
+      </div>
+    </div>
+    <div id="pictures" class="content">
+      <div class="header">
+        <h1>Engagement Photos</h1>
+      </div>
+      <div class="photo-container">
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200, "fitWidth": true }'>
+          <img class="grid-item grid-item--height" src="TO_USE/paige-kevin-31.jpg" />
+          <img class="grid-item grid-item--width" src="TO_USE/paige-kevin-52.jpg" />
+          <img class="grid-item grid-item--width" src="TO_USE/paige-kevin-64.jpg" />
+          <img class="grid-item grid-item--height" src="TO_USE/paige-kevin-158.jpg" />
+          <img class="grid-item grid-item--width" src="TO_USE/paige-kevin-93.jpg" />
+          <img class="grid-item grid-item--big" src="TO_USE/paige-kevin-99.jpg" />
+          <img class="grid-item grid-item--big" src="TO_USE/paige-kevin-185.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-    <script src="scripts/map.js"></script> -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+<script src="scripts/map.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
 </html>

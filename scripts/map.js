@@ -11,13 +11,28 @@ var map = new mapboxgl.Map({
 
 
 map.on('load', function() {
-  var myImage = new Image(100, 100);
-  myImage.src = './img/wedding_bitmoji.png';
-  myImage.onload = () => {
-    console.log(myImage)
-    map.addImage('wedding-bitmoji', myImage)
+  map.loadImage('https://karabond.com/img/wedding_bitmoji.png', function(error, image) {
+
+    function openPopup(e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      new mapboxgl.Popup({
+          className: 'popup'
+        })
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
+    }
+
+    if (error) throw error;
+    map.addImage('wedding-bitmoji', image)
     map.addLayer({
-      "id": "points",
+      "id": "bitmoji",
       "type": "symbol",
       "source": {
         "type": "geojson",
@@ -33,32 +48,17 @@ map.on('load', function() {
         }
       },
       "layout": {
-        "icon-image": "wedding-bitmoji"
+        "icon-image": "wedding-bitmoji",
+        "icon-size": 0.20
       }
     });
-  };
+
+    map.on('mouseenter', 'bitmoji', function() {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.on('mouseleave', 'bitmoji', function() {
+      map.getCanvas().style.cursor = '';
+    });
+  });
 });
-// var myImage = new Image(100, 100);
-// myImage.src = './img/wedding_bitmoji.png';
-// map.addImage('wedding_bitmoji', myImage);
-// map.addLayer({
-//   "id": "points",
-//   "type": "symbol",
-//   "source": {
-//     "type": "geojson",
-//     "data": {
-//       "type": "FeatureCollection",
-//       "features": [{
-//         "type": "Feature",
-//         "geometry": {
-//           "type": "Point",
-//           "coordinates": CABERFAE_COORDINATES
-//         }
-//       }]
-//     }
-//   },
-//   "layout": {
-//     "icon-image": "wedding_bitmoji",
-//     "icon-size": 1.0
-//   }
-// });

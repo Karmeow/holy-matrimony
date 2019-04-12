@@ -1,5 +1,15 @@
 #map {
   text-align: left;
-  width: 500px;
-  height: 500px;
+  width: 40%;
+  height: 65%;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 850px) {
+  #map {
+    display: table;
+    margin: 0 auto;
+    width: 65%;
+    height: 50%;
+  }
 }
