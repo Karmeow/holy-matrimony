@@ -2,6 +2,10 @@ body {
   margin:0;
 }
 
+.photo-container-small{
+  display: none;
+}
+
 .banner {
   height: 100%;
 }
@@ -164,9 +168,13 @@ body {
   }
 
   #info {
+    position: relative;
+    padding: 0;
+    float: unset;
     font-size: 24px;
-    width: 100%;
     text-align: center;
+    display: block;
+    width: auto;
     margin-bottom: 32px;
   }
 
@@ -227,15 +235,19 @@ body {
     width: 20%;
   }
 
-  .photo-container {
-    margin: 0 auto;
-    display: table;
-    max-width: 350px;
-    width: 100%;
+  .photos h1 {
+    font-size: 85%;
   }
 
-  .grid {
+  .photo-container-small {
+    visibility: visible;
+    max-width: 350px;
+    display: table;
     margin: 0 auto;
+  }
+
+  .photo-container {
+    display: none;
   }
 
   .grid-item--big { width: 250px; height: 167px; }
