@@ -44,7 +44,7 @@ body {
 #info {
   color: white;
   display: inline-block;
-  font-size: 50px;
+  font-size: 42px;
   padding-right: 40px;
   float: left;
   width: 48%;
@@ -142,6 +142,21 @@ body {
 .grid-item--big { width: 1000px; height: 667px; }
 .grid-item--width { width: 600px; height: 400px; }
 .grid-item--height {  width: 400px; height: 600px; }
+
+@media only screen and (min-width: 1700px) {
+
+  .grid {
+    width: 1500px !important;
+  }
+
+  .photo-container {
+    width: 1625px;
+  }
+
+  .grid-item--big { width: 1500px; height: 1000px; }
+  .grid-item--width { width: 900px; height: 600px; }
+  .grid-item--height {  width: 600px; height: 900px; }
+}
 
 @media only screen and (max-width: 850px) {
   .countdown-container p {
