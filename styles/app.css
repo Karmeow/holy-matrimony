@@ -101,9 +101,8 @@ hr.sub {
   background-image: url(../img/woods_50.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 100%;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .picture {
@@ -265,6 +264,10 @@ hr.sub {
 
   .header h1 {
     font-size: 85%;
+  }
+
+  .main {
+    /* background-size: 20%; */
   }
 
   .photo-container-small {
