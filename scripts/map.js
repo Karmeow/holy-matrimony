@@ -9,8 +9,15 @@ var map = new mapboxgl.Map({
   zoom: 6
 });
 
+var mapboxDirections = new MapboxDirections({
+  accessToken: mapboxgl.accessToken,
+  placeholderDestination: "1 Caberfae Lane Cadillac, Michigan 49601"
+});
+
+map.addControl(mapboxDirections, 'top-right');
 
 map.on('load', function() {
+  mapboxDirections.setDestination("1 Caberfae Lane Cadillac, Michigan 49601")
   map.loadImage('https://karabond.com/img/wedding_bitmoji.png', function(error, image) {
 
     function openPopup(e) {
