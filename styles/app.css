@@ -53,6 +53,11 @@ hr.sub {
   color: black;
 }
 
+#about-us {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 #info {
   display: inline-block;
   font-size: 42px;
@@ -101,7 +106,7 @@ hr.sub {
   background-image: url(../img/woods_50.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
 }
 
