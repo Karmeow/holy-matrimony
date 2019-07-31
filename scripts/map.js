@@ -11,7 +11,9 @@ var map = new mapboxgl.Map({
 
 var mapboxDirections = new MapboxDirections({
   accessToken: mapboxgl.accessToken,
-  placeholderDestination: "1 Caberfae Lane Cadillac, Michigan 49601"
+  flyTo: false,
+  zoom: 6,
+  placeholderOrigin: "Your address here!"
 });
 
 map.addControl(mapboxDirections, 'top-right');
