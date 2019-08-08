@@ -17,7 +17,7 @@ hr.sub {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.photo-container-small{
+.photo-container-small {
   display: none;
 }
 
@@ -217,6 +217,10 @@ hr.sub {
   .grid-item--big { width: 600px; height: 400px; }
   .grid-item--width { width: 600px; height: 400px; }
   .grid-item--height {  width: 600px; height: 900px; }
+
+  #venue {
+    height:auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
