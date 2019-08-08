@@ -1,8 +1,10 @@
 #map {
-  text-align: left;
-  width: 40%;
-  height: 65%;
-  display: inline-block;
+  /* text-align: center; */
+  display: table;
+  margin: 0 auto;
+  width: 830px;
+  height: 550px;
+  /* display: inline-block; */
 }
 
 @media only screen and (max-width: 850px) {
@@ -10,6 +12,6 @@
     display: table;
     margin: 0 auto;
     width: 95%;
-    height: 650px;
+    height: 550px;
   }
 }

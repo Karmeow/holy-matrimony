@@ -32,7 +32,7 @@ hr.sub {
 }
 
 #venue {
-  height: 100%;
+  height: auto;
   text-align: left;
   padding-bottom: 40px;
   min-height:100%;
@@ -59,12 +59,9 @@ hr.sub {
 }
 
 #info {
-  display: inline-block;
-  font-size: 42px;
-  padding-right: 40px;
-  float: left;
-  width: 48%;
-  text-align: right;
+  /* display: inline-block; */
+  font-size: 34px;
+  text-align: center;
 }
 
 #info p {
@@ -148,6 +145,11 @@ hr.sub {
 
 .grid {
   margin: 0 auto;
+}
+
+.derp {
+  width: 90%;
+  text-align: center;
 }
 
 .grid-item {
